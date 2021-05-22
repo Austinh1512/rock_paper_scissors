@@ -11,3 +11,16 @@ function computerPlay() {
     }
 }
 
+function getPlayerChoice() {
+    let choice = prompt("Make your choice: ").toLowerCase();
+    choice = validatePlayerChoice(choice);
+    return choice;
+}
+
+function validatePlayerChoice(c) {
+    while (c === undefined || (c !== "rock" && c !== "paper" && c !== "scissors")) {
+        console.log("Invalid input. Try again.");
+        c = prompt("Make your choice: ").toLowerCase();
+    }
+    return c;
+}
