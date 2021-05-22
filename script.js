@@ -1,4 +1,4 @@
-function computerPlay() {
+function getComputerChoice() {
     let choice = "";
     let randNum = Math.floor(Math.random() * 3);
     switch (randNum) {
