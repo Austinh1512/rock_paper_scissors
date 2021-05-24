@@ -49,7 +49,7 @@ function getComputerChoice() {
 }
 
 function getPlayerChoice() {
-    let choice = prompt("Make your choice: ").toLowerCase();
+    let choice = prompt("Make your choice: ").trim().toLowerCase();
     choice = validatePlayerChoice(choice);
     return choice;
 }
@@ -57,7 +57,7 @@ function getPlayerChoice() {
 function validatePlayerChoice(c) {
     while (c === undefined || (c !== "rock" && c !== "paper" && c !== "scissors")) {
         console.log("Invalid input. Try again.");
-        c = prompt("Make your choice: ").toLowerCase();
+        c = prompt("Make your choice: ").trim().toLowerCase();
     }
     return c;
 }
